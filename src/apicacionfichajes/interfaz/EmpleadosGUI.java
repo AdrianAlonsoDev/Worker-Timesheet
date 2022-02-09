@@ -94,16 +94,16 @@ public class EmpleadosGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        SelectionAndCode = new javax.swing.JPanel();
+        UserListScrollPaNel = new javax.swing.JScrollPane();
         jListEmp = new javax.swing.JList<>();
         jLabel1 = new javax.swing.JLabel();
         selectedUser = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
+        codePanel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         showCodigo = new javax.swing.JTextField();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
+        KeypadPanel = new javax.swing.JPanel();
+        Numpad = new javax.swing.JPanel();
         boton1 = new javax.swing.JButton();
         boton2 = new javax.swing.JButton();
         boton3 = new javax.swing.JButton();
@@ -116,16 +116,17 @@ public class EmpleadosGUI extends javax.swing.JFrame {
         boton0 = new javax.swing.JButton();
         botonOk = new javax.swing.JButton();
         botonReset = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        Title = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(600, 500));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        SelectionAndCode.setBackground(new java.awt.Color(255, 255, 255));
+        SelectionAndCode.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jListEmp.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         jListEmp.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -136,7 +137,7 @@ public class EmpleadosGUI extends javax.swing.JFrame {
                 jListEmpMousePressed(evt);
             }
         });
-        jScrollPane1.setViewportView(jListEmp);
+        UserListScrollPaNel.setViewportView(jListEmp);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -145,27 +146,28 @@ public class EmpleadosGUI extends javax.swing.JFrame {
         selectedUser.setFont(new java.awt.Font("Dialog", 2, 14)); // NOI18N
         selectedUser.setForeground(new java.awt.Color(0, 0, 0));
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        codePanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        codePanel.setForeground(new java.awt.Color(204, 204, 204));
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel2.setText("CÓDIGO:");
 
         showCodigo.setText(" ");
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout codePanelLayout = new javax.swing.GroupLayout(codePanel);
+        codePanel.setLayout(codePanelLayout);
+        codePanelLayout.setHorizontalGroup(
+            codePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(codePanelLayout.createSequentialGroup()
                 .addGap(60, 60, 60)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(codePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addComponent(showCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        codePanelLayout.setVerticalGroup(
+            codePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(codePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
@@ -173,39 +175,39 @@ public class EmpleadosGUI extends javax.swing.JFrame {
                 .addContainerGap(36, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout SelectionAndCodeLayout = new javax.swing.GroupLayout(SelectionAndCode);
+        SelectionAndCode.setLayout(SelectionAndCodeLayout);
+        SelectionAndCodeLayout.setHorizontalGroup(
+            SelectionAndCodeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SelectionAndCodeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(SelectionAndCodeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(codePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(SelectionAndCodeLayout.createSequentialGroup()
+                        .addGroup(SelectionAndCodeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(UserListScrollPaNel, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(selectedUser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        SelectionAndCodeLayout.setVerticalGroup(
+            SelectionAndCodeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(SelectionAndCodeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(UserListScrollPaNel, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(selectedUser, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 124, Short.MAX_VALUE)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(codePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18))
         );
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        KeypadPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel5.setLayout(new java.awt.GridLayout(4, 4));
+        Numpad.setLayout(new java.awt.GridLayout(4, 4));
 
         boton1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         boton1.setText("1");
@@ -214,7 +216,7 @@ public class EmpleadosGUI extends javax.swing.JFrame {
                 boton1ActionPerformed(evt);
             }
         });
-        jPanel5.add(boton1);
+        Numpad.add(boton1);
 
         boton2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         boton2.setText("2");
@@ -223,7 +225,7 @@ public class EmpleadosGUI extends javax.swing.JFrame {
                 boton2ActionPerformed(evt);
             }
         });
-        jPanel5.add(boton2);
+        Numpad.add(boton2);
 
         boton3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         boton3.setText("3");
@@ -232,7 +234,7 @@ public class EmpleadosGUI extends javax.swing.JFrame {
                 boton3ActionPerformed(evt);
             }
         });
-        jPanel5.add(boton3);
+        Numpad.add(boton3);
 
         boton4.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         boton4.setText("4");
@@ -241,7 +243,7 @@ public class EmpleadosGUI extends javax.swing.JFrame {
                 boton4ActionPerformed(evt);
             }
         });
-        jPanel5.add(boton4);
+        Numpad.add(boton4);
 
         boton5.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         boton5.setText("5");
@@ -250,7 +252,7 @@ public class EmpleadosGUI extends javax.swing.JFrame {
                 boton5ActionPerformed(evt);
             }
         });
-        jPanel5.add(boton5);
+        Numpad.add(boton5);
 
         boton6.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         boton6.setText("6");
@@ -259,7 +261,7 @@ public class EmpleadosGUI extends javax.swing.JFrame {
                 boton6ActionPerformed(evt);
             }
         });
-        jPanel5.add(boton6);
+        Numpad.add(boton6);
 
         boton7.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         boton7.setText("7");
@@ -268,7 +270,7 @@ public class EmpleadosGUI extends javax.swing.JFrame {
                 boton7ActionPerformed(evt);
             }
         });
-        jPanel5.add(boton7);
+        Numpad.add(boton7);
 
         jButton8.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jButton8.setText("8");
@@ -277,7 +279,7 @@ public class EmpleadosGUI extends javax.swing.JFrame {
                 jButton8ActionPerformed(evt);
             }
         });
-        jPanel5.add(jButton8);
+        Numpad.add(jButton8);
 
         boton9.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         boton9.setText("9");
@@ -286,7 +288,7 @@ public class EmpleadosGUI extends javax.swing.JFrame {
                 boton9ActionPerformed(evt);
             }
         });
-        jPanel5.add(boton9);
+        Numpad.add(boton9);
 
         boton0.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         boton0.setText("0");
@@ -295,7 +297,7 @@ public class EmpleadosGUI extends javax.swing.JFrame {
                 boton0ActionPerformed(evt);
             }
         });
-        jPanel5.add(boton0);
+        Numpad.add(boton0);
 
         botonOk.setBackground(new java.awt.Color(0, 102, 204));
         botonOk.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
@@ -305,7 +307,7 @@ public class EmpleadosGUI extends javax.swing.JFrame {
                 botonOkActionPerformed(evt);
             }
         });
-        jPanel5.add(botonOk);
+        Numpad.add(botonOk);
 
         botonReset.setBackground(new java.awt.Color(255, 51, 51));
         botonReset.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
@@ -315,27 +317,27 @@ public class EmpleadosGUI extends javax.swing.JFrame {
                 botonResetActionPerformed(evt);
             }
         });
-        jPanel5.add(botonReset);
+        Numpad.add(botonReset);
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout KeypadPanelLayout = new javax.swing.GroupLayout(KeypadPanel);
+        KeypadPanel.setLayout(KeypadPanelLayout);
+        KeypadPanelLayout.setHorizontalGroup(
+            KeypadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(KeypadPanelLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
+                .addComponent(Numpad, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        KeypadPanelLayout.setVerticalGroup(
+            KeypadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(KeypadPanelLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Numpad, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(72, Short.MAX_VALUE))
         );
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel3.setText("APLICACIÓN DE FICHAR");
+        Title.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        Title.setText("APLICACIÓN DE FICHAR");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -345,26 +347,26 @@ public class EmpleadosGUI extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(17, 17, 17)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(SelectionAndCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(KeypadPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(217, 217, 217)
-                        .addComponent(jLabel3)
+                        .addComponent(Title)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Title, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(12, 12, 12)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(SelectionAndCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(3, 3, 3)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(KeypadPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -502,6 +504,11 @@ public class EmpleadosGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel KeypadPanel;
+    private javax.swing.JPanel Numpad;
+    private javax.swing.JPanel SelectionAndCode;
+    private javax.swing.JLabel Title;
+    private javax.swing.JScrollPane UserListScrollPaNel;
     private javax.swing.JButton boton0;
     private javax.swing.JButton boton1;
     private javax.swing.JButton boton2;
@@ -513,17 +520,12 @@ public class EmpleadosGUI extends javax.swing.JFrame {
     private javax.swing.JButton boton9;
     private javax.swing.JButton botonOk;
     private javax.swing.JButton botonReset;
+    private javax.swing.JPanel codePanel;
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JList<String> jListEmp;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel selectedUser;
     private javax.swing.JTextField showCodigo;
     // End of variables declaration//GEN-END:variables
