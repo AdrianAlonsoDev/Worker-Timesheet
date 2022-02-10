@@ -101,7 +101,7 @@ public class SQLEmpleados {
             while (rs.next()) {
                 listado.add(new Empleado(rs.getInt(1),
                         rs.getString(2),
-                        rs.getString(3), rs.getInt(4), rs.getDouble(5)));
+                        rs.getString(3), rs.getInt(4), rs.getInt(5)));
             }
 
             rs.close();

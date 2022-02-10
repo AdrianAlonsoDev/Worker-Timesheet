@@ -788,7 +788,7 @@
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/apicacionfichajes/key.png"/>
+                          <Image iconType="2" name="C:\NetBeansProjects\AppFichar\files\key.png"/>
                         </Property>
                         <Property name="focusable" type="boolean" value="false"/>
                       </Properties>
@@ -805,7 +805,7 @@
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/apicacionfichajes/userico.png"/>
+                          <Image iconType="2" name="C:\NetBeansProjects\AppFichar\files\userico.png"/>
                         </Property>
                         <Property name="focusable" type="boolean" value="false"/>
                         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -843,27 +843,29 @@
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
+                              <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace pref="76" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
-                                      <Component id="loggedCurrentHours" min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="69" max="-2" attributes="0"/>
+                                              <Component id="loggedCurrentHours" min="-2" pref="61" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                                   </Group>
-                              </Group>
-                              <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="22" pref="22" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
                                       <Component id="loggedTotalHours" min="-2" pref="88" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -891,7 +893,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Dialog" size="18" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Horas trabajadas hoy:"/>
+                        <Property name="text" type="java.lang.String" value="Minutos trabajados hoy:"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="loggedCurrentHours">
@@ -899,6 +901,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Dialog" size="24" style="0"/>
                         </Property>
+                        <Property name="text" type="java.lang.String" value="0"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel9">
@@ -906,7 +909,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Dialog" size="18" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Horas Totales:"/>
+                        <Property name="text" type="java.lang.String" value="Minutos Totales:"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="loggedTotalHours">

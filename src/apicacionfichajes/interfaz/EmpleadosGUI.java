@@ -503,7 +503,7 @@ public class EmpleadosGUI extends javax.swing.JFrame {
 
         IconCodigo.setBackground(new java.awt.Color(255, 255, 255));
         IconCodigo.setForeground(new java.awt.Color(255, 255, 255));
-        IconCodigo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/apicacionfichajes/key.png"))); // NOI18N
+        IconCodigo.setIcon(new javax.swing.ImageIcon("C:\\NetBeansProjects\\AppFichar\\files\\key.png")); // NOI18N
         IconCodigo.setFocusable(false);
         IconCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -513,7 +513,7 @@ public class EmpleadosGUI extends javax.swing.JFrame {
 
         IconCodigo1.setBackground(new java.awt.Color(255, 255, 255));
         IconCodigo1.setForeground(new java.awt.Color(255, 255, 255));
-        IconCodigo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/apicacionfichajes/userico.png"))); // NOI18N
+        IconCodigo1.setIcon(new javax.swing.ImageIcon("C:\\NetBeansProjects\\AppFichar\\files\\userico.png")); // NOI18N
         IconCodigo1.setFocusable(false);
         IconCodigo1.setMaximumSize(new java.awt.Dimension(120, 120));
         IconCodigo1.setMinimumSize(new java.awt.Dimension(120, 120));
@@ -581,12 +581,13 @@ public class EmpleadosGUI extends javax.swing.JFrame {
         PanelHoras.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel10.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel10.setText("Horas trabajadas hoy:");
+        jLabel10.setText("Minutos trabajados hoy:");
 
         loggedCurrentHours.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        loggedCurrentHours.setText("0");
 
         jLabel9.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel9.setText("Horas Totales:");
+        jLabel9.setText("Minutos Totales:");
 
         loggedTotalHours.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
 
@@ -595,22 +596,23 @@ public class EmpleadosGUI extends javax.swing.JFrame {
         PanelHorasLayout.setHorizontalGroup(
             PanelHorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator1)
+            .addGroup(PanelHorasLayout.createSequentialGroup()
+                .addGap(102, 102, 102)
+                .addComponent(jLabel9)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelHorasLayout.createSequentialGroup()
                 .addContainerGap(76, Short.MAX_VALUE)
                 .addGroup(PanelHorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10)
-                    .addGroup(PanelHorasLayout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addComponent(loggedCurrentHours, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(66, 66, 66))
-            .addGroup(PanelHorasLayout.createSequentialGroup()
-                .addGap(102, 102, 102)
-                .addGroup(PanelHorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanelHorasLayout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(loggedTotalHours, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel9))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelHorasLayout.createSequentialGroup()
+                        .addGroup(PanelHorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10)
+                            .addGroup(PanelHorasLayout.createSequentialGroup()
+                                .addGap(69, 69, 69)
+                                .addComponent(loggedCurrentHours, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(66, 66, 66))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelHorasLayout.createSequentialGroup()
+                        .addComponent(loggedTotalHours, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(122, 122, 122))))
         );
         PanelHorasLayout.setVerticalGroup(
             PanelHorasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -736,16 +738,19 @@ public class EmpleadosGUI extends javax.swing.JFrame {
             loggedUser = empSelection;
             this.loggedName.setText(loggedUser.getNombre());
             this.loggedSurname.setText(loggedUser.getApellidos());
+            this.loggedTotalHours.setText(Double.toString((loggedUser.getTotal_horas()/60)));
             this.TabbedPane.setSelectedIndex(1);
             this.Logeado.setVisible(true);
             this.Fichar.setVisible(false);
             GH.insertarEntrada(loggedUser);
+            reset();
         } else {
             JOptionPane.showMessageDialog(null,
                 "El código introducido no es correcto, prueba a intentarlo de nuevo.", "Error de Logeo",
                 JOptionPane.ERROR_MESSAGE);
+            reset();
         }
-        reset();
+        
 
     }//GEN-LAST:event_botonOkActionPerformed
 
@@ -791,7 +796,6 @@ public class EmpleadosGUI extends javax.swing.JFrame {
 
     private void jListEmpMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jListEmpMousePressed
         reset();
-        this.selectedUser.setText("");
         empSelection = this.ME.get(this.jListEmp.getSelectedIndex());
         this.selectedUser.setText(empSelection.toSimpleString());
         this.showCodigo.setEnabled(true);

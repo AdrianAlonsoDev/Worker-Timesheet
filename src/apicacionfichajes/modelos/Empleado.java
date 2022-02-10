@@ -13,7 +13,7 @@ public class Empleado {
     private String nombre;
     private String apellidos;
     private int codigo;
-    private double total_horas;
+    private int total_horas;
     
     public Empleado() {
         this.id = 0;
@@ -23,7 +23,7 @@ public class Empleado {
         this.total_horas = 0;
     }
     
-    public Empleado(int id, String nombre, String apellidos, int codigo, double total_horas) {
+    public Empleado(int id, String nombre, String apellidos, int codigo, int total_horas) {
         this.id = id;
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -63,11 +63,11 @@ public class Empleado {
         this.codigo = codigo;
     }
 
-    public double getTotal_horas() {
+    public int getTotal_horas() {
         return total_horas;
     }
 
-    public void setTotal_horas(double total_horas) {
+    public void setTotal_horas(int total_horas) {
         this.total_horas = total_horas;
     }   
 

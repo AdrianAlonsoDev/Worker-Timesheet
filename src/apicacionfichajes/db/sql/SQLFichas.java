@@ -47,14 +47,14 @@ public class SQLFichas {
             ResultSet rs;
             switch(type) {
                 case ENTRADA:
-                    sql = String.format("SELECT empleado_id FROM fichas WHERE empleado_id = %s and salida is null",
+                    sql = String.format("SELECT empleado_id FROM fichas WHERE empleado_id = %s AND salida is null",
                     empl.getId());
                     sentence.execute(sql);
                     rs = sentence.getResultSet();
 
                     if(!(rs.next())){
                         sql = String.format("INSERT INTO fichas (empleado_id,entrada,salida) VALUES ("+ empl.getId() +",now(),null)");
-                        resultadoQuery = sentence.execute(sql); 
+                        resultadoQuery = sentence.execute(sql);      
                     }                                
                     break; 
                 case SALIDA:
@@ -62,7 +62,22 @@ public class SQLFichas {
                     empl.getId());
                     //Ejecutamos la sentencia
                     resultadoQuery = sentence.execute(sql);
+                    
+                    sql = String.format("SELECT empleado_id, entrada, salida, TIMESTAMPDIFF(SECOND, entrada, salida) AS difference FROM fichas WHERE empleado_id = %s",
+                        empl.getId());
+                    
+                    rs = sentence.executeQuery(sql);
+                    int seconds = 0;
+                    if(rs.next()) {
+                        
+                        seconds = rs.getInt("difference");
+                    }
+                    sql = String.format("UPDATE empleados SET total_horas=total_horas + %s WHERE id = %s",
+                                            seconds, empl.getId());
+
+                    resultadoQuery = sentence.execute(sql);
                     break;
+
             }            
             sentence.close();
             desconectar();
