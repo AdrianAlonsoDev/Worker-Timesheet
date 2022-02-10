@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package apicacionfichajes.gestionsql;
+package apicacionfichajes.gestion;
 
-import apicacionfichajes.ManagerEmpleados;
-import apicacionfichajes.ManagerFichas;
+import apicacionfichajes.db.sql.SQLFichas;
+import apicacionfichajes.db.sql.SQLEmpleados;
 import apicacionfichajes.modelos.Empleado;
 import apicacionfichajes.modelos.Ficha;
 import apicacionfichajes.modelos.QType;
@@ -43,7 +43,7 @@ public class GestionHelper {
         SQLF.fichaQuery(emp, QType.FType.ENTRADA);
     }
 
-    public void eliminarSalida(Empleado emp) {
+    public void insertarSalida(Empleado emp) {
         SQLF.fichaQuery(emp, QType.FType.SALIDA);
     }
     

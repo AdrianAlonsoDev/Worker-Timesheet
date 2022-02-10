@@ -2,10 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package apicacionfichajes.gestionsql;
+package apicacionfichajes.db.sql;
 
-import apicacionfichajes.ManagerEmpleados;
+import apicacionfichajes.gestion.ManagerEmpleados;
 import apicacionfichajes.db.GestionDBConn;
+import apicacionfichajes.gestion.GestionHelper;
 import apicacionfichajes.modelos.Empleado;
 import apicacionfichajes.modelos.DebugManager;
 import apicacionfichajes.modelos.QType;
@@ -24,7 +25,6 @@ import javax.swing.JOptionPane;
 public class SQLEmpleados {
 
     final GestionDBConn GDB = GestionDBConn.getInstance();
-    ManagerEmpleados ME = new ManagerEmpleados();
     final DebugManager logger = new DebugManager(true);
 
     private void conectar() {
@@ -70,7 +70,7 @@ public class SQLEmpleados {
                         int codigo = rs.getInt(1);
                         
                         if(codigo == 1) {
-                            logged = true;
+                            logged = true;                          
                         }
                     } 
                     break;

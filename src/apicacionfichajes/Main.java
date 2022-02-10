@@ -4,7 +4,7 @@
  */
 package apicacionfichajes;
 
-import apicacionfichajes.gestionsql.GestionHelper;
+import apicacionfichajes.gestion.GestionHelper;
 import apicacionfichajes.modelos.Empleado;
 
 

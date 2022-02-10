@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package apicacionfichajes.gestionsql;
+package apicacionfichajes.db.sql;
 
-import apicacionfichajes.ManagerEmpleados;
-import apicacionfichajes.ManagerFichas;
+import apicacionfichajes.gestion.ManagerEmpleados;
+import apicacionfichajes.gestion.ManagerFichas;
 import apicacionfichajes.db.GestionDBConn;
 import apicacionfichajes.modelos.Empleado;
 import apicacionfichajes.modelos.DebugManager;
