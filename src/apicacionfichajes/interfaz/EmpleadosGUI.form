@@ -893,7 +893,7 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Dialog" size="18" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Minutos trabajados hoy:"/>
+                        <Property name="text" type="java.lang.String" value="Horas trabajadas hoy:"/>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="loggedCurrentHours">

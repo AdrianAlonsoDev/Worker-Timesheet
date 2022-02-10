@@ -581,7 +581,7 @@ public class EmpleadosGUI extends javax.swing.JFrame {
         PanelHoras.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel10.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel10.setText("Minutos trabajados hoy:");
+        jLabel10.setText("Horas trabajadas hoy:");
 
         loggedCurrentHours.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         loggedCurrentHours.setText("0");
@@ -832,6 +832,7 @@ public class EmpleadosGUI extends javax.swing.JFrame {
         this.showCodigo.setText(" ");
         this.codigo = 0;
         empSelection = null;
+        GH.listarEmpleados();  
     }
     
     /**
